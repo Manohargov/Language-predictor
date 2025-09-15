@@ -14,7 +14,7 @@ It trains a machine learning model to classify text into different languages and
 - Creates a **Pipeline** for streamlined training and prediction.  
 - Saves the trained model using **Pickle** for later use.  
 - Predicts the language of new unseen text.
-
+![alt text](image.png)
 ---
 
 ## 📂 Project Structure
