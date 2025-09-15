@@ -1,4 +1,4 @@
-# Language Detection using Naive Bayes
+# Language Detection using Naive Bayes+Docker+FastAPI+Render
 
 This project demonstrates how to build a **Language Detection Model** using **Naive Bayes** and a **Bag-of-Words (CountVectorizer)** approach.  
 It trains a machine learning model to classify text into different languages and saves the trained model as a pipeline for reuse.
@@ -14,7 +14,7 @@ It trains a machine learning model to classify text into different languages and
 - Creates a **Pipeline** for streamlined training and prediction.  
 - Saves the trained model using **Pickle** for later use.  
 - Predicts the language of new unseen text.
-![alt text](image.png)
+
 ---
 
 ## 📂 Project Structure
@@ -119,6 +119,29 @@ print(pipe.predict(["Hello, how are you?"]))  # Output: English
 
 ---
 
+## 📦 Run with Docker
+The project includes a Dockerfile so it can be containerized.
+- Build the Docker image.
+- Run the container and map it to a port on your machine.
+- Access the API endpoints and documentation through your browser or API client.
+
+---
+## 🖥️ API development-FastAPI
+The application can be started with Uvicorn, making the API available on your local machine. It exposes two endpoints:
+- Health Check → returns service status and model version.
+- Prediction → accepts input text and returns the detected language.
+- Interactive documentation is automatically available through the FastAPI Swagger UI.
+
+---
+## Deployment on Render
+- Connect your GitHub repository to Render.
+- Create a new Web Service and choose Docker environment.
+- Render automatically builds the image using your Dockerfile.
+- Set the start command (for FastAPI in Docker it’s handled by the base image).
+- Expose port 80 (or the port your app is running on).
+- Once deployed, your API is available at a public Render URL with full /docs support.
+
+---
 ## ✅ Requirements
 - Python 3.7+  
 - pandas  
